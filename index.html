@@ -12,14 +12,14 @@
     <header></header>
 
     <section class="search-container">
-        <input type="text" id="location-input" name="location-input" placeholder="Search" />
+        <input type="text" id="input" name="input" placeholder="Search" />
+        <button id="submit">Search</button>
     </section>
-    <section class="location-container">
-        <h2 class="location" id="main location">location</h2>
-        <h2 class="date">date</h2>
-    </section>
-    <section class="main-card">
-        <div class="icon" id="main-icon">ICON</div>
+    <section id="main-card">
+        <h2 class="location" id="cityName">location</h2>
+        <h2 id="current-date">10/20/22</h2>
+<!-- Changed element to img so we can set the src depending on icon ID from weatherData function-->
+        <img class="icon" id="main-icon">ICON</img>
         <div class="temp" id="main-temp">50 C</div>
         <div class="wind" id="main-wind">Wind Speed</div>
         <div class="humidity" id="main-humidity">Humidity</div>
@@ -27,35 +27,35 @@
 
     <section class="weather-container">
         <section class="forecast-1">
-            <h3 class="f1-date">forecast 1 date</h3>
+            <h3 class="date" id="f1-date">forecast 1 date</h3>
             <div class="icon" id="f1-icon">ICON</div>
             <div class="temp" id="f1-temp">50 C</div>
             <div class="wind" id="f1-wind">Wind Speed</div>
             <div class="humidity" id="f1-humidity">Humidity</div>
         </section>
         <section class="forecast-2">
-            <h3 class="f2-date">forecast 2 date</h3>
+            <h3 class="date" id="f2-date">forecast 2 date</h3>
             <div class="icon" id="f2-icon">ICON</div>
             <div class="temp" id="f2-temp">50 C</div>
             <div class="wind" id="f2-wind">Wind Speed</div>
             <div class="humidity" id="f2-humidity">Humidity</div>
         </section>
         <section class="forecast-3">
-            <h3 class="f3-date">forecast 3 date</h3>
+            <h3 class="date" id="f3-date">forecast 3 date</h3>
             <div class="icon" id="f3-icon">ICON</div>
             <div class="temp" id="f3-temp">50 C</div>
             <div class="wind" id="f3-wind">Wind Speed</div>
             <div class="humidity" id="f3-humidity">Humidity</div>
         </section>
         <section class="forecast-4">
-            <h3 class="f4-date">forecast 4 date</h3>
+            <h3 class="date" id="f4-date">forecast 4 date</h3>
             <div class="icon" id="f4-icon">ICON</div>
             <div class="temp" id="f4-temp">50 C</div>
             <div class="wind" id="f4-wind">Wind Speed</div>
             <div class="humidity" id="f4-humidity">Humidity</div>
         </section>
         <section class="forecast-5">
-            <h3 class="f5-date">forecast 5 date</h3>
+            <h3 class="date" id="f5-date">forecast 5 date</h3>
             <div class="icon" id="f5-icon">ICON</div>
             <div class="temp" id="f5-temp">50 C</div>
             <div class="wind" id="f5-wind">Wind Speed</div>
@@ -63,12 +63,14 @@
         </section>
     </section>
 
-    <section class="saved-locations">
+    <section id="past-searches">
         <button class="saved-location">Saved location</button>
     </section>
 
     <footer></footer>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="./Assets/script.js"></script>
 </body>
 
 </html>
