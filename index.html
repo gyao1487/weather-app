@@ -5,72 +5,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./Assets/css/normalize.css">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+    <title>Weather Dashboard</title>
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <h1>What's the weather lookin' like?</h1>
+    </header>
+    <main>
+        <section class="parent">
+            <section class="search-container">
+                <section class="search-bar">
+                    <input type="text" id="input" name="input" placeholder="What city are you in?" />
+                    <button id="submit">Search</button>
+                </section>
+                <section class="saved-location" id="past-searches">
+                </section>
+            </section>
+            <div class="toggle"></div>
+            <section id="main-card" class="main-container">
+                <article class="card-container">
+                    <article class="card">
+                        <h2 class="location" id="cityName"></h2>
+                        <h2 id="current-date"></h2>
+                        <!-- Changed element to img so we can set the src depending on icon ID from weatherData function-->
+                        <img class="icon" id="main-icon">
+                        <div class="temp" id="main-temp"></div>
+                        <div class="wind" id="main-wind"></div>
+                        <div class="humidity" id="main-humidity"></div>
+                    </article>
+                </article>
+            </section>
 
-    <section class="search-container">
-        <input type="text" id="input" name="input" placeholder="Search" />
-        <button id="submit">Search</button>
-    </section>
-    <section id="main-card">
-        <h2 class="location" id="cityName">location</h2>
-        <h2 id="current-date">10/20/22</h2>
-<!-- Changed element to img so we can set the src depending on icon ID from weatherData function-->
-        <img class="icon" id="main-icon">ICON</img>
-        <div class="temp" id="main-temp">50 C</div>
-        <div class="wind" id="main-wind">Wind Speed</div>
-        <div class="humidity" id="main-humidity">Humidity</div>
-    </section>
-
-    <section class="weather-container">
-        <section class="forecast-1">
-            <h3 class="date" id="f1-date">forecast 1 date</h3>
-            <div class="icon" id="f1-icon">ICON</div>
-            <div class="temp" id="f1-temp">50 C</div>
-            <div class="wind" id="f1-wind">Wind Speed</div>
-            <div class="humidity" id="f1-humidity">Humidity</div>
+            <section class="forecast-1">
+                <article class="card">
+                    <h3 class="date" id="f1-date"></h3>
+                    <img class="icon" id="f1-icon">
+                    <div class="temp" id="f1-temp"></div>
+                    <div class="wind" id="f1-wind"></div>
+                    <div class="humidity" id="f1-humidity"></div>
+                </article>
+            </section>
+            <section class="forecast-2">
+                <article class="card">
+                    <h3 class="date" id="f2-date"></h3>
+                    <img class="icon" id="f2-icon">
+                    <div class="temp" id="f2-temp"></div>
+                    <div class="wind" id="f2-wind"></div>
+                    <div class="humidity" id="f2-humidity"></div>
+                </article>
+            </section>
+            <section class="forecast-3">
+                <article class="card">
+                    <h3 class="date" id="f3-date"></h3>
+                    <img class="icon" id="f3-icon">
+                    <div class="temp" id="f3-temp"></div>
+                    <div class="wind" id="f3-wind"></div>
+                    <div class="humidity" id="f3-humidity"></div>
+                </article>
+            </section>
+            <section class="forecast-4">
+                <article class="card">
+                    <h3 class="date" id="f4-date"></h3>
+                    <img class="icon" id="f4-icon">
+                    <div class="temp" id="f4-temp"></div>
+                    <div class="wind" id="f4-wind"></div>
+                    <div class="humidity" id="f4-humidity"></div>
+                </article>
+            </section>
+            <section class="forecast-5">
+                <article class="card">
+                    <h3 class="date" id="f5-date"></h3>
+                    <img class="icon" id="f5-icon">
+                    <div class="temp" id="f5-temp"></div>
+                    <div class="wind" id="f5-wind"></div>
+                    <div class="humidity" id="f5-humidity"></div>
+                </article>
+            </section>
         </section>
-        <section class="forecast-2">
-            <h3 class="date" id="f2-date">forecast 2 date</h3>
-            <div class="icon" id="f2-icon">ICON</div>
-            <div class="temp" id="f2-temp">50 C</div>
-            <div class="wind" id="f2-wind">Wind Speed</div>
-            <div class="humidity" id="f2-humidity">Humidity</div>
-        </section>
-        <section class="forecast-3">
-            <h3 class="date" id="f3-date">forecast 3 date</h3>
-            <div class="icon" id="f3-icon">ICON</div>
-            <div class="temp" id="f3-temp">50 C</div>
-            <div class="wind" id="f3-wind">Wind Speed</div>
-            <div class="humidity" id="f3-humidity">Humidity</div>
-        </section>
-        <section class="forecast-4">
-            <h3 class="date" id="f4-date">forecast 4 date</h3>
-            <div class="icon" id="f4-icon">ICON</div>
-            <div class="temp" id="f4-temp">50 C</div>
-            <div class="wind" id="f4-wind">Wind Speed</div>
-            <div class="humidity" id="f4-humidity">Humidity</div>
-        </section>
-        <section class="forecast-5">
-            <h3 class="date" id="f5-date">forecast 5 date</h3>
-            <div class="icon" id="f5-icon">ICON</div>
-            <div class="temp" id="f5-temp">50 C</div>
-            <div class="wind" id="f5-wind">Wind Speed</div>
-            <div class="humidity" id="f5-humidity">Humidity</div>
-        </section>
-    </section>
-
-    <section id="past-searches">
-        <button class="saved-location">Saved location</button>
-    </section>
-
+    </main>
     <footer></footer>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./Assets/js/moment.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-<script src="./Assets/script.js"></script>
+    <script src="./Assets/js/script.js"></script>
 </body>
 
 </html>
