@@ -80,5 +80,8 @@ main {
 }
 
 footer {
-    color: white
+    color: white;
+    text-align: center;
+    padding: 1 rem;
+    margin-top: 5 rem;
 }

@@ -1,11 +1,11 @@
-# JavaScript Code Quiz
+# Weather Dashboard
 ## Description
 
 The primary goal of this project is to create a simple weather app that retrieves data using the OpenWeather API. The secondary goal was to practice using fetch requests, parsing through fetched data, and displaying selected data for the user. Also utilized Local Storage for saved searches, and retrieving items from local storage.
 
 ## Installation
 
-You can open the webpage in your web browser using this URL: 
+You can open the webpage in your web browser using this URL: https://gyao1487.github.io/weather-app/
 
 ## Usage
 Features implemented on this webpage:
@@ -15,7 +15,7 @@ Features implemented on this webpage:
 * Clicking buttons for previously searched cities will bring up weather data from those cities.
 * Duplicate searches will not create new buttons
 
-![Webpage Screenshot](./assets/screenshot.PNG)
+![Webpage Screenshot](./Assets/screenshot.PNG)
 
 
 ## Credits
