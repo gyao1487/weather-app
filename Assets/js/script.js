@@ -44,11 +44,16 @@ let temp5 = document.getElementById('f5-temp');
 let wind5 = document.getElementById('f5-wind');
 let humidity5 = document.getElementById('f5-humidity');
 
+
 //=====SEARCH BUTTON STARTS FUNCTIONS TO GET DATA AND SAVE TO STORAGE=====
+
 searchBtn.addEventListener('click', start)
-let weatherDisplay = document.querySelector('.weather-display')
+let cards = document.getElementsByClassName('card')
 function showResults () {
-    weatherDisplay.style.display = "grid";
+    for (let i = 0; i<cards.length;i++) {
+        cards[i].setAttribute('id','show');
+    }
+    
 }
 function start() {
     saveStorage();
@@ -94,19 +99,19 @@ function weatherData(lat, lon) {
             wind2.textContent = 'Wind Speed:' + data.list[12].wind.speed;
             humidity2.textContent = 'Humidity:' + data.list[12].main.humidity;
             icon2.src = 'http://openweathermap.org/img/wn/'+data.list[12].weather[0].icon+'@2x.png';
-            //Day 3
+            //Day 3 Card
             date3.textContent = moment().add(3,'days').format('MMMM Do');
             temp3.textContent = data.list[18].main.temp + '\u00B0 F';
             wind3.textContent = 'Wind Speed:' + data.list[18].wind.speed;
             humidity3.textContent = 'Humidity:' + data.list[18].main.humidity;
             icon3.src = 'http://openweathermap.org/img/wn/'+data.list[18].weather[0].icon+'@2x.png';
-            //Day 4
+            //Day 4 Card
             date4.textContent = moment().add(4,'days').format('MMMM Do');
             temp4.textContent = data.list[24].main.temp + '\u00B0 F';
             wind4.textContent = 'Wind Speed:' + data.list[24].wind.speed;
             humidity4.textContent = 'Humidity:' + data.list[24].main.humidity;
             icon4.src = 'http://openweathermap.org/img/wn/'+data.list[24].weather[0].icon+'@2x.png';
-            //Day 5 
+            //Day 5 Card
             date5.textContent = moment().add(5,'days').format('MMMM Do');
             temp5.textContent = data.list[30].main.temp + '\u00B0 F';
             wind5.textContent = 'Wind Speed:' + data.list[30].wind.speed;
@@ -114,9 +119,6 @@ function weatherData(lat, lon) {
             icon5.src = 'http://openweathermap.org/img/wn/'+data.list[30].weather[0].icon+'@2x.png';
         })
 };
-
-
-
 
 //========================= PUSHING PAST SEARCHES TO STORAGE =========================
 let pastSearches = document.getElementById('past-searches')
@@ -153,12 +155,11 @@ function displayPastSearches() {
 
     })
 }
-displayPastSearches()
+displayPastSearches();
 
 //=================== FETCH & DISPLAY DATA WHEN CLICKING PAST SEARCH BUTTON =================== 
 pastSearches.addEventListener('click', function (event) {
     input.value = event.target.textContent;
     getResults();
-})
-
-;
+    showResults ();
+});

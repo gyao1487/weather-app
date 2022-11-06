@@ -25,9 +25,6 @@ main {
    
 }
 
-button {
-
-}
 
 /*Grid layout*/
 .parent {
@@ -70,10 +67,18 @@ button {
 .card {
     background: white;
     box-shadow: 0 7px 7px rgba(0, 0, 0, 0.1);
-    display: flex;
+    display: none;
     flex-direction: column;
     border-radius: 25px;
-    position: relative;
     padding: 1rem;
     top: 0;
+}
+
+#main-card{
+    width: 100%;
+    flex-direction: none;
+}
+
+#show {
+    display: flex;
 }
